@@ -9,7 +9,7 @@ function twoSum(nums: number[], target: number): number[] {
         const value = nums[i];
         const suspect = target - value;
 
-        if (valsIndexObj[suspect] && valsIndexObj[suspect] !== i) {
+        if (valsIndexObj.hasOwnProperty(suspect) && valsIndexObj[suspect] !== i) {
             return [i, valsIndexObj[suspect]];
         }
     }
