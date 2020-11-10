@@ -9,12 +9,8 @@ function twoSum(nums: number[], target: number): number[] {
         const value = nums[i];
         const suspect = target - value;
 
-        console.log(`
-        valsIndexObj[suspect]=> ${typeof valsIndexObj[suspect]}
-        i => ${typeof i}
-        suspect => ${suspect} ${typeof suspect}`)
         if (valsIndexObj[suspect] && valsIndexObj[suspect] !== i) {
-            return [i, valsIndexObj[value]];
+            return [i, valsIndexObj[suspect]];
         }
     }
 
