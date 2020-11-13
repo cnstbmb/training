@@ -2,7 +2,6 @@ function lengthOfLongestSubstring(s: string): number {
     let chars: {[char: string]: boolean | string} = {};
     let length = 0;
     let biggestLength = 0;
-    // let prevSymbol: string | null = null;
 
     for (let i=0; i < s.length; i++) {
         const char = s[i];
