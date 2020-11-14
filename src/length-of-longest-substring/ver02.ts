@@ -1,6 +1,6 @@
 function lengthOfLongestSubstringVer02(s: string): number {
     const sLength: number = s.length;
-    const charSequence: {[char: string]: boolean} = {};
+    const charSequence: {[char: string]: string} = {};
 
     let result = 0;
     let start = 0;
@@ -10,7 +10,7 @@ function lengthOfLongestSubstringVer02(s: string): number {
         const char: string = s[end];
 
         if (!charSequence[char]) {
-            charSequence[char] = true;
+            charSequence[char] = `${end}`;
             end++;
 
             result = Math.max(result, end - start);

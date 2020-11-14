@@ -14,7 +14,7 @@ function lengthOfLongestSubstringv1(s: string): number {
 };
 
 function checkUniq(s: string, start: number, end: number): boolean {
-    let chars: {[char: string]: boolean | string} = {};
+    let chars: {[char: string]: string} = {};
 
     for (let i = start; i < end; i++) {
         const char = s[i];
@@ -22,7 +22,7 @@ function checkUniq(s: string, start: number, end: number): boolean {
         if(chars[char]) {
             return false;
         }
-        chars[char] = true;
+        chars[char] = `${i}`;
     }
 
     return true;
